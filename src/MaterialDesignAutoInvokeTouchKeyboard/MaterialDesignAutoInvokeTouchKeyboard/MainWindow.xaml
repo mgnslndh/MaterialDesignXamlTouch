@@ -34,6 +34,48 @@
                             Margin="24" 
                             Text="Hello World"/>
                     </materialDesign:PopupBox>
+
+
+                    <materialDesign:DialogHost Margin="24">
+                        <materialDesign:DialogHost.DialogContent>
+                            <StackPanel>
+                                <Button
+                                    Margin="12"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Content="Close Dialog"
+                                    Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"/>
+                                <TextBox Margin="12" FontSize="24">Hello Dialog</TextBox>
+                            </StackPanel>
+                        </materialDesign:DialogHost.DialogContent>
+                        <Grid>
+                            <Button HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Content="Open Default Dialog"
+                                    Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"/>
+                        </Grid>
+                    </materialDesign:DialogHost>
+
+                    <materialDesign:DialogHost Margin="24" Style="{StaticResource MaterialDesignEmbeddedDialogHost}">
+                        <materialDesign:DialogHost.DialogContent>
+                            <StackPanel>
+                                <Button
+                                    Margin="12"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Content="Close Dialog"
+                                    Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"/>
+                                <TextBox Margin="12" FontSize="24">Hello Dialog</TextBox>
+                            </StackPanel>
+                        </materialDesign:DialogHost.DialogContent>
+                        <Grid>
+                            <Button HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Content="Open Embedded Dialog"
+                                    Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"/>
+                        </Grid>
+                    </materialDesign:DialogHost>
+
                 </StackPanel>
                 
             </materialDesign:Card>
